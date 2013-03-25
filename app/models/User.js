@@ -63,3 +63,8 @@ UserSchema.method("destroy", function(callback) {
         }
     });
 });
+
+mongoose.model("User", UserSchema);
+var User = mongoose.model("User");
+
+module.exports = User;

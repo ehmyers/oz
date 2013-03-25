@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>new user form</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>new user form</h1>
+
+    <%= message %>
+
+    <form action="/users/new" method="post">
+
+    	<label>user id
+    		<input name="userId" type="text" />
+    	</label>
+
+    	<label>user first name
+    		<input name="firstName" type="text" />
+    	</label>
+
+    	<label>user zipcode
+    		<input name="zipcode" type="text" />
+    	</label>
+
+    	<input value="create user" type="submit" />
+
+    </form>
+  </body>
+</html>
