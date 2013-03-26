@@ -29,6 +29,10 @@ app.configure("development", function(){
   app.use(express.errorHandler());
 });
 
+app.configure("production", function() {
+
+});
+
 mongoose.connect("mongodb://localhost/test");
 
 app.get("/", routes.index);

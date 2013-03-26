@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "oz",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,16 +10,5 @@
     "ejs": "*",
     "less-middleware": "*",
     "mongoose": "*"
-  },
-    "name": "tutorial",
-    "description": "a tutorial on using node, redis, and express",
-    "version": "0.0.1",
-    "dependencies": {
-        "ntwitter": "0.5.x",
-        "redis": "0.8.x"
-    },
-    "engines": {
-      "node": "0.8.x",
-      "npm": "1.1.x"
-    }
+  }
 }
