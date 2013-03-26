@@ -2,13 +2,15 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-<<<<<<< HEAD
-a {
-  color: #00B7FF;
-}
-=======
 
 a {
-  color: #00B7FF;
+  color: #000000;
+  text-decoration: none;
 }
->>>>>>> implement user list and update user
+span {
+  padding-right: 10px;
+}
+.id_number {
+  display: inline-block;
+  width: 20px;
+}

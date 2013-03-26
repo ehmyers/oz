@@ -4,10 +4,23 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  var UserModel = require("../models/User");
+=======
+var UserModel = require("../models/User");
+>>>>>>> implements delete method, among other items
 
 exports.list = function(req, res){
-  res.send("respond with a resource");
+    UserModel.getAllUsers(function(error, userList) {
+        if (error) {
+            res.send(error);
+        }
+        else {
+            res.render("allUserView", {
+                users: userList
+            });
+        }
+    });
 };
 
 exports.showUser = function(req, res){
@@ -40,8 +53,61 @@ exports.newUser = function(req, res){
             });
         }
     });
+<<<<<<< HEAD
 =======
 exports.list = function(req, res){
   res.send("respond with a resource");
 >>>>>>> implement user list and update user
+=======
+};
+
+exports.updateUserForm = function(req, res){
+    UserModel.getUser(req.params.userId, function(error, user) {
+        if (error) {
+            res.send(error);
+        }
+        else {
+            res.render("userUpdate", {
+                message: "",
+                user: user
+            });
+        }
+    });
+};
+
+exports.updateUser = function(req, res){
+    UserModel.getUser(req.params.userId, function(error, user) {
+        if (error) {
+            res.send(error);
+        }
+        else {
+            user.update(req.body, function(error) {
+                if (error) {
+                    res.send(error);
+                }
+                else {
+                    res.redirect("/users/");
+                }
+            });
+        }
+    });
+}
+
+exports.deleteUser = function(req, res){
+    UserModel.getUser(req.params.userId, function(error, user) {
+        if (error) {
+            res.send(error);
+        }
+        else {
+            user.destroy(function(error) {
+                if (error) {
+                    res.send(error);
+                }
+                else {
+                    res.redirect("/users/");
+                }
+            });
+        }
+    });
+>>>>>>> implements delete method, among other items
 };

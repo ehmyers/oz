@@ -9,6 +9,18 @@ var UserSchema = new Schema ( {
     zipcode: String
 });
 
+// displays all users
+UserSchema.static("getAllUsers", function(callback){
+    User.find({}, function(error, users) {
+        if (error) {
+            callback(error);
+        }
+        else {
+            callback(null, users);
+        }
+    });
+});
+
 // gets the user information
 UserSchema.static("getUser", function(userId, callback) {
     User.findOne({"userId": userId}, function(error, user) {
