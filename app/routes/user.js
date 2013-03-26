@@ -43,9 +43,7 @@ exports.newUser = function(req, res){
             res.send(error);
         }
         else {
-            res.render("userForm", {
-                message:"you successfully created a new user! yes good."
-            });
+            res.redirect("/users/");
         }
     });
 };

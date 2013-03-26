@@ -1,15 +1,25 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 a {
   color: #000000;
   text-decoration: none;
 }
-span {
-  padding-right: 10px;
+body {
+  padding: 50px;
+  background: #dde9f9;
+  font-family: 'Asap', sans-serif;
+}
+h1 {
+  font-size: 3em;
 }
 .id_number {
   display: inline-block;
   width: 20px;
+}
+label {
+  padding-right: 30px;
+}
+p {
+  font-size: 1.1em;
+}
+span {
+  padding-right: 10px;
 }
