@@ -3,6 +3,7 @@
  * GET users listing.
  */
 
+<<<<<<< HEAD
  var UserModel = require("../models/User");
 
 exports.list = function(req, res){
@@ -39,4 +40,8 @@ exports.newUser = function(req, res){
             });
         }
     });
+=======
+exports.list = function(req, res){
+  res.send("respond with a resource");
+>>>>>>> implement user list and update user
 };

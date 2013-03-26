@@ -1,4 +1,6 @@
 *~
 .DS_Store
 .vagrant
-node_modules
+app/credentials.js
+app/node_modules
+.vagrant*
