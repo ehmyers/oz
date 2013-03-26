@@ -1,10 +1,5 @@
 Vagrant::Config.run do |config|
   config.vm.box = "precise32"
-<<<<<<< HEAD
-  
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-=======
->>>>>>> implement user list and update user
 
   config.vm.forward_port 3000, 3000
 
