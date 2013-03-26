@@ -3,12 +3,7 @@
  * GET users listing.
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
- var UserModel = require("../models/User");
-=======
 var UserModel = require("../models/User");
->>>>>>> implements delete method, among other items
 
 exports.list = function(req, res){
     UserModel.getAllUsers(function(error, userList) {
@@ -53,12 +48,6 @@ exports.newUser = function(req, res){
             });
         }
     });
-<<<<<<< HEAD
-=======
-exports.list = function(req, res){
-  res.send("respond with a resource");
->>>>>>> implement user list and update user
-=======
 };
 
 exports.updateUserForm = function(req, res){
@@ -109,5 +98,4 @@ exports.deleteUser = function(req, res){
             });
         }
     });
->>>>>>> implements delete method, among other items
 };
