@@ -23,7 +23,12 @@ p {
 span {
   padding-right: 10px;
 }
+ul {
+  padding: 0px;
+  margin: 0px;
+}
 ul li {
   display: inline;
-  padding-right: 40px;
+  margin: 0px;
+  padding: 0px 40px 0px 0px;
 }

@@ -35,19 +35,29 @@ app.configure("production", function() {
 
 mongoose.connect("mongodb://localhost/test");
 
+// sets index
 app.get("/", routes.index);
+
 // lists users
 app.get("/users", userController.list);
-// new user form lines
+
+// id check screen
+//app.get("/users", userController.);
+
+// new user form
 app.get("/users/new", userController.newUserForm);
 app.post("/users/new", userController.newUser);
+
 // showing the user
 app.get("/users/:userId", userController.showUser);
+
 // updating the user
 app.get("/users/:userId/update", userController.updateUserForm);
 app.put("/users/:userId", userController.updateUser);
+
 // deleting the user
 app.delete("/users/:userId", userController.deleteUser);
+
 
 http.createServer(app).listen(app.get("port"), function(){
   console.log("Express server listening on port " + app.get("port"));
