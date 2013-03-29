@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>heart</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>heart</h1>
+
+    <%= message %>
+
+    <form action="/users/new" method="post">
+
+        <label>user id
+            <input name="userId" type="text" />
+        </label>
+
+        <label>user first name
+            <input name="firstName" type="text" />
+        </label>
+
+        <label>favorite feature about your current house?
+            <input name="favoriteHouseFeature" type="text" />
+        </label>
+
+        <label>user zipcode
+            <input name="zipcode" type="text" />
+        </label>
+
+        <label>heart information
+            <input name="heartPass" type="text" /> <!-- convert to number -->
+        </label>
+
+        <input value="create user" type="submit" />
+
+    </form>
+  </body>
+</html>

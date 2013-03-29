@@ -6,9 +6,23 @@
     <link rel="stylesheet" href="/stylesheets/font-awesome.css">
     <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
+
     <h1>all users</h1>
-    <p><a href="/users/new"><span><i class="icon-file"></i></span>create new user</a></p>
+
+    <h2>
+      <ul>
+        <li><a href="#">heart</a></li>
+        <li><a href="#">courage</a></li>
+        <li><a href="#">brain</a></li>
+      </ul>
+    </h2>
+
+    <p>
+      <a href="/users/new"><span><i class="icon-file"></i></span>create new user</a>
+    </p>
+
     <% users.sort(function(a,b){ 
         if (a.userId > b.userId) {
           return 1;
@@ -19,11 +33,13 @@
         return 0;
       }); 
       users.forEach(function(user) { %>
+
       <p>
         <span><a href="/users/<%= user.userId %>/update"><i class="icon-pencil"></i></a></span>
         <span class="id_number"><%= user.userId %></span>
         <span><%= user.firstName %></span>
       </p>
+
     <% }); %>
   </body>
 </html>

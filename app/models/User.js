@@ -6,7 +6,11 @@ var UserSchema = new Schema ( {
     userId: {type:Number, unique:true},
     firstName: String,
     streetAddress: String,
-    zipcode: String
+    zipcode: String,
+    heartPass: Number,
+    couragePass: Number,
+    brainPass: Number,
+    favoriteHouseFeature: String
 });
 
 // displays all users
