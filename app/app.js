@@ -37,12 +37,15 @@ mongoose.connect("mongodb://localhost/test");
 
 // sets index
 app.get("/", routes.index);
-
 // lists users
 app.get("/users", userController.list);
 
-// id check screen
-//app.get("/users", userController.);
+// setting up heart, courage, brain forms
+app.get("/heart", userController.heartForm);
+app.get("/courage", userController.courageForm);
+app.get("/brains", userController.brainForm);
+// submitting heart, courage, brian forms
+app.post("/submitData", userController.submitData);
 
 // new user form
 app.get("/users/new", userController.newUserForm);
@@ -50,7 +53,6 @@ app.post("/users/new", userController.newUser);
 
 // showing the user
 app.get("/users/:userId", userController.showUser);
-
 // updating the user
 app.get("/users/:userId/update", userController.updateUserForm);
 app.put("/users/:userId", userController.updateUser);

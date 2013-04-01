@@ -97,3 +97,26 @@ exports.deleteUser = function(req, res){
         }
     });
 };
+
+exports.heartForm = function(req, res){
+    res.render("heartForm");
+};
+
+exports.courageForm = function(req, res){
+    res.render("courageForm");
+};
+
+exports.brainForm = function(req, res){
+    res.render("brainForm");
+};
+
+exports.submitData = function(req, res){
+    UserModel.createOrUpdate(req.body, function(error) {
+        if (error) {
+            res.send(error);
+        }
+        else {
+            res.send("Please continue on to the remaining sections");
+        }
+    });
+};

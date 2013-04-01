@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>courage</title>
+    <title>brains</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>courage</h1>
+    <h1>brains</h1>
 
-    <%= message %>
-
-    <form action="/users/new" method="post">
+    <form action="/submitData" method="post">
 
         <label>user id
-            <input name="userId" type="text" />
+            <input name="userId" type="text" required />
         </label>
 
         <label>current street address?
             <input name="streetAddress" type="text" /> <!-- convert to number -->
         </label>
-
+<!-- 
         <label>brain information
-            <input name="brainPass" type="text" /> <!-- convert to number -->
-        </label>
+            <input name="brainPass" type="text" />
+        </label> -->
 
         <input value="create user" type="submit" />
 

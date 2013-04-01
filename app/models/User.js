@@ -68,6 +68,25 @@ UserSchema.method("update", function(userAttributes, callback) {
     });
 });
 
+// create new OR update user
+UserSchema.static("createOrUpdate", function(userAttributes, callback) {
+    User.findOne({"userId": userAttributes.userId}, function(error, user) {
+        if (error) {
+            callback(error);
+        }
+        else {
+            if (user) {
+                // update user
+                user.update(userAttributes, callback);
+            }
+            else {
+                // create user
+                User.create(userAttributes, callback);
+            }
+        }
+    });
+});
+
 // destroy user
 UserSchema.method("destroy", function(callback) {
     User.remove({"userId": this.userId}, function(error) {
