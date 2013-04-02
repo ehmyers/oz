@@ -6,7 +6,16 @@
     <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>brains</h1>
+    <h1><a href="/">Emerald City Real Estate</a></h1>
+    
+    <h2>
+      <ul>
+        <li><a href="/" id="home">home</a></li>
+        <li><a href="/heart" id="heart">heart</a></li>
+        <li><a href="/courage" id="courage">courage</a></li>
+        <li><a href="/brains" id="brains" class="active">brains</a></li>
+      </ul>
+    </h2>
 
     <form action="/submitData" method="post">
 
@@ -17,12 +26,12 @@
         <label>current street address?
             <input name="streetAddress" type="text" /> <!-- convert to number -->
         </label>
-<!-- 
-        <label>brain information
-            <input name="brainPass" type="text" />
-        </label> -->
 
-        <input value="create user" type="submit" />
+        <label>user zipcode
+            <input name="zipcode" type="text" />
+        </label>
+
+        <input value="submit" type="submit" />
 
     </form>
   </body>

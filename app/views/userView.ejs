@@ -5,8 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
+
     <h1><%= user.firstName %></h1>
-    <p>Welcome to <%= user.firstName %></p>
+
+    <p>
+      <span><a href="/users/<%= user.userId %>/update"><i class="icon-pencil"></i></a></span>
+      <span class="id_number"><%= user.userId %></span>
+      <span><%= user.firstName %></span>
+      <span><%= user.streetAddress %></span>
+      <span><%= user.zipcode %></span>
+      <span><%= user.streetAddress %></span>
+      <span><%= user.favoriteHouseFeature %></span>
+    </p>
+
   </body>
 </html>
