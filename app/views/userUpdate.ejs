@@ -19,12 +19,20 @@
     	</label>
 
     	<label>user first name
-    		<input name="firstName" type="text" value="<%= user.firstName %>" />
+    		<input name="firstName" type="text" value="<%= user.firstName || '' %>" />
     	</label>
 
+        <label>user street address
+            <input name="streetAddress" type="text" value="<%= user.streetAddress || ''%>" />
+        </label>
+
     	<label>user zipcode
-    		<input name="zipcode" type="text" value="<%= user.zipcode %>" />
+    		<input name="zipcode" type="text" value="<%= user.zipcode || '' %>" />
     	</label>
+
+        <label>favorite house feature
+            <input name="favoriteHouseFeature" type="text" value="<%= user.favoriteHouseFeature || '' %>" />
+        </label>
 
     	<input value="update user" type="submit" />
 

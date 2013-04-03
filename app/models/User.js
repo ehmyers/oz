@@ -63,7 +63,7 @@ UserSchema.method("update", function(userAttributes, callback) {
             callback(error);
         }
         else {
-            callback(null);
+            callback(null, this);
         }
     });
 });

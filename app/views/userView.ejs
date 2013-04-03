@@ -8,16 +8,15 @@
 
   <body>
 
-    <h1><%= user.firstName %></h1>
+    <h1>user: <%= user.firstName %></h1>
 
     <p>
       <span><a href="/users/<%= user.userId %>/update"><i class="icon-pencil"></i></a></span>
       <span class="id_number"><%= user.userId %></span>
-      <span><%= user.firstName %></span>
-      <span><%= user.streetAddress %></span>
-      <span><%= user.zipcode %></span>
-      <span><%= user.streetAddress %></span>
-      <span><%= user.favoriteHouseFeature %></span>
+      <span><%= user.firstName || "no name" %></span>
+      <span><%= user.streetAddress || "no address" %></span>
+      <span><%= user.zipcode || "no zipcode" %></span>
+      <span><%= user.favoriteHouseFeature || "no house feature" %></span>
     </p>
 
   </body>

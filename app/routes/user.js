@@ -111,12 +111,12 @@ exports.brainForm = function(req, res){
 };
 
 exports.submitData = function(req, res){
-    UserModel.createOrUpdate(req.body, function(error) {
+    UserModel.createOrUpdate(req.body, function(error, user) {
         if (error) {
             res.send(error);
         }
         else {
-            res.send("Please continue on to the remaining sections");
+            res.render("successfulSubmit");
         }
     });
 };

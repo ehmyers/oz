@@ -10,6 +10,9 @@ body {
   background: #dde9f9;
   font-family: 'Asap', sans-serif;
 }
+form {
+  margin-bottom: 15px;
+}
 h1 {
   font-size: 3em;
 }
@@ -18,7 +21,13 @@ h1 {
   width: 20px;
 }
 label {
+  display: block;
+  width: 300px;
   padding-right: 30px;
+  padding-bottom: 15px;
+}
+label input {
+  float: right;
 }
 p {
   font-size: 1.1em;
