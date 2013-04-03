@@ -8,7 +8,8 @@ var express = require("express")
   , userController = require("./routes/user")
   , http = require("http")
   , path = require("path")
-  , mongoose = require("mongoose");
+  , mongoose = require("mongoose")
+  , mongoURL;
 
 var app = express();
 
@@ -23,6 +24,8 @@ app.configure(function(){
   app.use(app.router);
   app.use(require("less-middleware")({ src: __dirname + "/public" }));
   app.use(express.static(path.join(__dirname, "public")));
+
+  mongoURL = "mongodb://localhost/test";
 });
 
 app.configure("development", function(){
@@ -30,9 +33,10 @@ app.configure("development", function(){
 });
 
 app.configure("production", function() {
-
+  mongoURL = "mongodb://emily:isawesome@dharma.mongohq.com:10038/testDB";
 });
 
+console.log(mongoURL);
 mongoose.connect("mongodb://localhost/test");
 
 // sets index
