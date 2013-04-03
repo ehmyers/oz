@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>update user form</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>update user form</h1>
+
+    <%= message %>
+
+    <form action="/users/<%= user.userId %>" method="post">
+
+    	<input name="_method" type="hidden" value="put" />
+
+    	<label>user id
+    		<input name="userId" type="text" value="<%= user.userId %>" />
+    	</label>
+
+    	<label>user first name
+    		<input name="firstName" type="text" value="<%= user.firstName || '' %>" />
+    	</label>
+
+        <label>user street address
+            <input name="streetAddress" type="text" value="<%= user.streetAddress || ''%>" />
+        </label>
+
+    	<label>user zipcode
+    		<input name="zipcode" type="text" value="<%= user.zipcode || '' %>" />
+    	</label>
+
+        <label>favorite house feature
+            <input name="favoriteHouseFeature" type="text" value="<%= user.favoriteHouseFeature || '' %>" />
+        </label>
+
+    	<input value="update user" type="submit" />
+
+    </form>
+
+    <form action="/users/<%= user.userId %>" method="post">
+
+        <input name="_method" type="hidden" value="delete" />
+
+        <input value="delete user" type="submit" />
+
+    </form>
+
+  </body>
+</html>
