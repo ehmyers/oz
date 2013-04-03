@@ -37,7 +37,7 @@ app.configure("production", function() {
 });
 
 console.log(mongoURL);
-mongoose.connect("mongodb://localhost/test");
+mongoose.connect(mongoURL);
 
 // sets index
 app.get("/", routes.index);
