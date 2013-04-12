@@ -12,19 +12,27 @@
 
     <form action="/users/new" method="post">
 
-    	<label>user id
-    		<input name="userId" type="text" />
-    	</label>
+        <label>user id
+            <input name="userId" type="number" required />
+        </label>
 
-    	<label>user first name
-    		<input name="firstName" type="text" />
-    	</label>
+        <label>user first name
+            <input name="firstName" type="text" />
+        </label>
 
-    	<label>user zipcode
-    		<input name="zipcode" type="text" />
-    	</label>
+        <label>user street address
+            <input name="streetAddress" type="text" />
+        </label>
 
-    	<input value="create user" type="submit" />
+        <label>user zipcode
+            <input name="zipcode" type="number" required />
+        </label>
+
+        <label>favorite feature about current house?
+            <input name="favoriteHouseFeature" type="text" />
+        </label>
+
+        <input value="create user" type="submit" />
 
     </form>
   </body>
