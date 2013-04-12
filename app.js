@@ -48,6 +48,10 @@ app.get("/users", userController.list);
 app.get("/heart", userController.heartForm);
 app.get("/courage", userController.courageForm);
 app.get("/brains", userController.brainForm);
+// heart, courage, brain games
+app.get("/heart-game", userController.heartGame);
+app.get("/courage-game", userController.courageGame);
+app.get("/brain-game", userController.brainGame);
 // submitting heart, courage, brain forms
 app.post("/submitData", userController.submitData);
 

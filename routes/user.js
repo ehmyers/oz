@@ -98,18 +98,29 @@ exports.deleteUser = function(req, res){
     });
 };
 
+// forms
 exports.heartForm = function(req, res){
     res.render("heartForm");
 };
-
 exports.courageForm = function(req, res){
     res.render("courageForm");
 };
-
 exports.brainForm = function(req, res){
     res.render("brainForm");
 };
 
+// games
+exports.heartGame = function(req, res){
+    res.render("heartGame");
+};
+exports.courageGame = function(req, res){
+    res.render("courageGame");
+};
+exports.brainGame = function(req, res){
+    res.render("brainGame");
+};
+
+// submit data
 exports.submitData = function(req, res){
     UserModel.createOrUpdate(req.body, function(error, user) {
         if (error) {
