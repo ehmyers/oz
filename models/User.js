@@ -6,7 +6,7 @@ var UserSchema = new Schema ( {
     userId: {type:Number, unique:true},
     firstName: String,
     streetAddress: String,
-    zipcode: String,
+    zipcode: Number,
     heartPass: Number,
     couragePass: Number,
     brainPass: Number,
