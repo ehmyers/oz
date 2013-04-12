@@ -48,7 +48,7 @@ app.get("/users", userController.list);
 app.get("/heart", userController.heartForm);
 app.get("/courage", userController.courageForm);
 app.get("/brains", userController.brainForm);
-// submitting heart, courage, brian forms
+// submitting heart, courage, brain forms
 app.post("/submitData", userController.submitData);
 
 // new user form
