@@ -1,0 +1,449 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Google Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Sintony:400,700);
+@import url(http://fonts.googleapis.com/css?family=Sintony:400,700|Amethysta);
+
+body, html {
+	height:100%;
+	width:100%;
+	margin: 0;
+	padding: 0;
+}
+	
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #292929;
+	/*background-color: #D4F2B7;*//*Holding on to this one in case of design changes*/
+	/**/background-image: url("../images/bg2.png");/*File included, not sure if this can be used-SD*/
+	background-attachment:fixed;
+}
+
+a{outline:0};
+
+.fixed{
+	position:fixed;
+	width:100%;
+	}
+	
+.top{
+	top:0;
+	}
+	
+.connect{
+	
+	position:fixed;
+	z-index:1;
+	top:215px;
+	left:-37px;
+	height:auto;
+
+	padding-right:25px;
+	/*background-color:#fff;
+	border: 1px solid #096;
+	border-radius:10px;
+	background-image: url("images/hf_bg1.png");*/
+	transition: all 1s ease-in-out;
+	}
+
+.connect ul{
+	list-style:none outside none;
+	margin:0;
+	padding:0;
+	
+	width:32px;
+	}
+
+.connect img{
+	padding:5px;
+	}
+
+.connect_links{
+	float:left;
+	background-color:#FCFCE5;
+	border-bottom-right-radius:10px;
+	padding-right:5px;
+	}
+	
+.connect_indicator{
+	border: 1px 1px 1px 0;
+	border-color: #096;
+	border-style: solid;
+	border-left-style:none;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	background-image: url("../images/hf_bg1.png");
+	width:40px;
+	height:40px;
+	float:right;
+	}
+	
+.connect div.slogan{
+    -moz-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+	font-family: "Sintony", sans-serif;
+	font-size:10px;
+	white-space:nowrap;
+	min-width:150px;
+	background-color:red;
+	position:relative;
+	}
+	
+.connect:hover{
+	left:0px;
+	}
+
+	
+.nav_links{	
+	width:1004px;
+	position:relative;
+	height:35px;
+	/*SD-Important for positioning*/
+	/*if any new elements are created, for the different sections, they need to be*/
+	/*wrapped in an internal div and given the attributes below*/
+	/*Element needs an explicit width to calc. auto L/R margins*/
+	/*May also need RELATIVE position*/
+	/*Works like a jello layout, only in parts*/
+	display:block;	
+	margin-right:auto;
+	margin-left:auto;
+	}
+
+/*New nav structure*/
+.nav_links ul{
+	list-style:none inside none;
+	margin:0;
+	padding:0;
+	}
+	
+.nav_links img{
+	padding-top:3px;
+	float:left;
+	padding-right:55px;
+	}
+
+.nav_links img.end{
+	padding-top:3px;
+	float:left;
+	padding-right:0px;
+	}
+	
+.nav_links li{
+	font-family: "plaza_letplain", verdana, serif;
+	color:#D4F2B7;
+	font-size: 24px;
+	float:left;
+	padding-right:50px;
+	margin:0;
+	padding-top:5px;
+	}
+	
+.nav_links li a{
+	text-decoration:none;
+	color:#D4F2B7;
+	border-bottom-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	transition: all 1.5s ease-in;
+	text-shadow: 1px 1px 1px #000;
+	}
+	
+
+.nav_links li a:hover, .nav_links li a:active{
+	color:#ce6b56;
+	text-shadow: 2px 2px 2px #000;
+	}
+/*----------------------*/
+
+	
+.footerCap {
+	height: 3px;
+	width: 100%;
+	background-color: #009966;
+	top: 0px;
+	position: absolute;
+}
+.frameDecorTop {
+	
+}
+.ornateFrameTop {
+	
+}
+.bottomOrnateFrame {
+	
+}
+.pictureFrame {
+	height: 350px;
+	width: 575px;
+	position:relative;
+	border: medium none #D4F2B7;
+}
+.innerFrame {
+	height: 290px;
+	width: 525px
+	/*z-index:4;*//*Not sure why this is here, leaving it j.i.c. - SD*/
+	border: thin solid #009160;
+	background-color: #D4F2B7;
+	position:relative;
+}
+.slogan1 {
+	
+}
+
+.sales_content{
+
+	padding:20px 0 20px 0;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-bottom: 1px solid #e0e0c8;
+	position:relative;
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	}
+
+.sales_content .innerhtml{
+	background-image: url("../images/sbg1.png");
+	width:800px;
+	height:601px;
+	box-shadow: 1px 1px 5px #888888;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+.sales_content .entry{
+	font-family: "Sintony", sans-serif;
+	font-size: 16px;
+	color:#292929;
+	width:800px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+.sales_content .entry .left_content{
+    list-style:none 
+	text-align:left;
+	margin-left:400px;
+	}
+
+.sales_content .entry .left_content ul{
+    list-style:none inside none;
+	}
+	
+.sales_content .entry .left_content li{ 
+	padding-top:10px;
+	}	
+	
+.sales_content .entry h3{
+	font-family: "Sintony", sans-serif;	
+	}
+
+.sales_content .entry img.clear{
+	left:-10px;
+	position:absolute;
+	}
+		
+.col_two{
+	float:right;
+	position:relative;
+	}
+	
+.container {
+	min-height:100%;
+	position:relative;
+	min-width:984px;
+}
+.header {
+	height: 130px;
+	width: 100%;
+	background-color: #d4f2b7;
+	position: absolute;
+	top: 0px;
+}
+
+.links_bar {
+	height: 40px;
+	background-color: #096;
+	background-image:  -moz-linear-gradient(middle, #444444, #999999);
+	background-image:  linear-gradient(to bottom, #016846, #096, #016846);
+	box-shadow: 0 8px 6px -6px black;
+}
+.logo {
+	padding-top:10px;
+	background-color:#D4F2B7;
+	height: 155px;
+	background-image: url("../images/hf_bg1.png");
+
+	width:100%;
+
+}
+
+.logo img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+.frameDecor {
+}
+
+
+.ornateRight {
+	position: absolute;
+	top: 3px;
+	left: 275px;
+}
+.ornateLeft {
+	position: absolute;
+	left: 275px;
+	top: 3px;
+}
+.ornateRight {
+	position: absolute;
+	left: 935px;
+	top: 3px;
+}
+.footer {
+	height: 75px;
+	bottom: 0px;
+	background-color: #D4F2B7;
+	position: fixed;
+	width:100%; /*Needs a width, since it is ABSOLUTE, and out of flow-SD*/
+	background-image: url("../images/hf_bg1.png");
+	box-shadow: 0px -7px 7px -7px black;
+}
+
+.footer .center{
+	font-family: "Sintony", sans-serif;
+	font-size:10px;
+	text-align:center;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:800px;
+	padding-top:20px;
+
+	}
+	
+.footer .right{
+	float:right;
+	padding:10px;
+	position:absolute;
+	right:0px;
+	top:0;
+	}
+
+	
+.content {
+	position: relative;
+	height:auto !important;
+	min-height:100%;
+	/*padding-bottom:170px;*/
+	/*background-color: #292929;*/
+	top: -25px;
+	z-index: -1;
+	margin-bottom:50px;
+}
+.content_content{
+	display:block;	
+	margin-right:auto;
+	margin-left:auto;
+	min-width:900px;
+	padding:10px;
+	min-height:100%;
+	height:100%;
+	margin-top:20px;
+	background-color: #FCFCE5;
+    box-shadow: 1px 1px 5px #888888;
+    max-width:900px;
+    bottom:0;
+	}
+	
+.footerBottom {
+	height: 3px;
+	width: 100%;
+	background-color: #1E9A63;
+	bottom: 0px;
+	position:absolute;
+	
+}
+.footer_content{
+	display:block;	
+	margin-right:auto;
+	margin-left:auto;
+	}
+	
+#slogan2 {
+	position: absolute;
+	left: 215px;
+	top: 335px;
+}
+#slogan3 {
+	position: absolute;
+	top: 310px;
+	left: 120px;
+}
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on April 7, 2013 */
+/* If any of the fonts listed below are moved, be sure to update the links below*/
+/* Otherwise, enjoy -- SD*/
+
+
+@font-face {
+    font-family: "plaza_letplain";
+    src: url("../fonts/plaza_let_plain-webfont.eot");
+    src: url("../fonts/plaza_let_plain-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/plaza_let_plain-webfont.woff") format("woff"),
+         url("../fonts/plaza_let_plain-webfont.ttf") format("truetype"),
+         url("../fonts/plaza_let_plain-webfont.svg#plaza_letplain") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*-----------------------------------------------------------------------------*/
+
+/*No longer needed d/t the nav above... :) SD*/
+.liesureLink {
+	position: absolute;
+	left: 620px;
+	top: 14px;
+}
+.eventsLink {
+	position: absolute;
+	left: 695px;
+	top: 14px;
+}
+.galleryLink {
+	position: absolute;
+	left: 770px;
+	top: 14px;
+}
+.contactLink {
+	position: absolute;
+	left: 845px;
+	top: 14px;
+}
+
+.homeLink {
+	position: absolute;
+	top: 14px;
+	left: 330px;
+}
+.courageLink {
+	position: absolute;
+	left: 535px;
+	top: 14px;
+}
+.heartLink {
+	position: absolute;
+	left: 470px;
+	top: 14px;
+}
+.brainLink {
+	position: absolute;
+	top: 14px;
+	left: 405px;
+}
+/*-------------------------------------*/
