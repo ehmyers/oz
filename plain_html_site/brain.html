@@ -4,13 +4,12 @@
   <title>Emerald City Reality :: Emerald City Real Estate&trade; is the wise choice</title>
 
   <link rel="icon" HREF="images/ec_fav.png" />
-  <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
-  <link href="stylesheets/stylesheet.css" rel="stylesheet" type="text/css" />
-  <script src="javacsripts/app.js"></script>
-
+  <link rel="stylesheet" href="/stylesheets/layouts.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script src="javascripts/app.js"></script>
 </head>
 
-<body onload="MM_preloadImages('images/homeRollover.png','images/brainLink.png','images/heartLink.png','images/courageLink.png','images/leisureLink.png','images/eventsLink.png','images/galleryLink.png')">
+<body onload="MM_preloadImages("images/homeRollover.png","images/brainLink.png","images/heartLink.png","images/courageLink.png","images/leisureLink.png","images/eventsLink.png","images/galleryLink.png")">
 
   <div class="container">
 
@@ -21,15 +20,15 @@
     <div class="links_bar">
       <div class="nav_links">
         <img src="images/ornateLeft.png" width="33" height="35" />
-          <ul>
-          <li><a href="index.html">hOME</a></li>
-          <li><a href="brain.html">bRAIN</a></li>
-          <li><a href="heart.html">hEART</a></li>
-          <li><a href="courage.html">cOURAGE</a></li>
-          <li><a href="leisure.html">lEISURE</a></li>
-          <li><a href="events.html">eVENTS</a></li>
-          <li><a href="gallery.html">gALLERY</a></li>
-          <li><a href="contact.html">cONTACT</a></li>
+        <ul>
+          <li><a href="/" id="home">hOME</a></li>
+          <li><a href="/brain" id="brain" class="active">bRAIN</a></li>
+          <li><a href="/heart" id="heart">hEART</a></li>
+          <li><a href="/courage" id="courage">cOURAGE</a></li>
+          <li><a href="/leisure" id="leisure">lEISURE</a></li>
+          <li><a href="/events" id="events">eVENTS</a></li>
+          <li><a href="/gallery" id="gallery">gALLERY</a></li>
+          <li><a href="/contact" id="contact">cONTACT</a></li>
         </ul>
         <img class="end" width="33px" height="35px" src="images/ornateRight.png" />
       </div><!--Ends the nav_links div-->
@@ -57,23 +56,23 @@
       <!--Text/Images go here-->  
       <!--Sales_content is for the individual sections of the content container-->
       
-        <div class="sales_content">
-          
-        </div><!--Ends the sales_content div -->
-       
-        <div class="sales_content">
-          <div class="entry">
-            
-          </div><!--Ends the entry div-->
+        <form action="/submitData" method="post">
 
-        </div><!--Ends the sales_content div -->
+          <label>user id
+              <input name="userId" type="number" required />
+          </label>
 
-        <div class="sales_content">
-         <div class="entry">
-           
-         </div><!--Ends the entry div -->
-   
-        </div><!-- Ends the sales_content div-->
+          <label>current street address?
+              <input name="streetAddress" type="text" /> <!-- convert to number -->
+          </label>
+
+          <label>user zipcode
+              <input name="zipcode" type="text" required />
+          </label>
+
+          <input value="submit" type="submit" />
+
+        </form>
 
       <!--Text/Images go here-->  
 

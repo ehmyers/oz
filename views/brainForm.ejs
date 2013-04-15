@@ -1,42 +1,106 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>brains</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link href="http://fonts.googleapis.com/css?family=Asap:400,700" rel="stylesheet" type="text/css" />
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Emerald City Reality :: Emerald City Real Estate&trade; is the wise choice</title>
 
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  </head>
+  <link rel="icon" HREF="images/ec_fav.png" />
+  <link rel="stylesheet" href="/stylesheets/layouts.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script src="javascripts/app.js"></script>
+</head>
 
-  <body onload="init();">
-    <h1><a href="/">Emerald City Real Estate</a></h1>
-    
-    <h2>
-      <ul>
-        <li><a href="/" id="home">home</a></li>
-        <li><a href="/heart" id="heart">heart</a></li>
-        <li><a href="/courage" id="courage">courage</a></li>
-        <li><a href="/brains" id="brains" class="active">brains</a></li>
-      </ul>
-    </h2>
+<body onload="MM_preloadImages("images/homeRollover.png","images/brainLink.png","images/heartLink.png","images/courageLink.png","images/leisureLink.png","images/eventsLink.png","images/galleryLink.png")">
 
-    <form action="/submitData" method="post">
+  <div class="container">
 
-      <label>user id
-          <input name="userId" type="number" required />
-      </label>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" /></a>
+    </div>
 
-      <label>current street address?
-          <input name="streetAddress" type="text" /> <!-- convert to number -->
-      </label>
+    <div class="links_bar">
+      <div class="nav_links">
+        <img src="images/ornateLeft.png" width="33" height="35" />
+        <ul>
+          <li><a href="/" id="home">hOME</a></li>
+          <li><a href="/brain" id="brain" class="active">bRAIN</a></li>
+          <li><a href="/heart" id="heart">hEART</a></li>
+          <li><a href="/courage" id="courage">cOURAGE</a></li>
+          <li><a href="/leisure" id="leisure">lEISURE</a></li>
+          <li><a href="/events" id="events">eVENTS</a></li>
+          <li><a href="/gallery" id="gallery">gALLERY</a></li>
+          <li><a href="/contact" id="contact">cONTACT</a></li>
+        </ul>
+        <img class="end" width="33px" height="35px" src="images/ornateRight.png" />
+      </div><!--Ends the nav_links div-->
+    </div><!--Ends the links_bar div-->
 
-      <label>user zipcode
-          <input name="zipcode" type="text" required />
-      </label>
+    <!--Social contact popout starts here-->
+    <div class="connect">
+      <div class="connect_links">
+        <ul>
+          <li><a href="http://www.facebook.com"><img src="images/fb_icon.png" /></a></li>
+          <li><a href="http://www.twitter.com"><img src="images/t_icon.png" /></a></li>
+          <li><a href="http://www.goole.com/+"><img src="images/plus_icon.png" /></a></li>
+        </ul>
+      </div><!--Ends the connect_links div-->
+     
+      <div class="connect_indicator"><img src="images/socialInd.png" /></div>
+    </div><!--Ends the connect div-->
+    <!--Social contact popout ends here-->
 
-      <input value="submit" type="submit" />
+    <!--Body content div-->
+    <div class="content">
 
-    </form>
+      <!--Body content inner div-->
+      <div class="content_content">
+      <!--Text/Images go here-->  
+      <!--Sales_content is for the individual sections of the content container-->
+      
+        <form action="/submitData" method="post">
 
-  </body>
+          <label>user id
+              <input name="userId" type="number" required />
+          </label>
+
+          <label>current street address?
+              <input name="streetAddress" type="text" /> <!-- convert to number -->
+          </label>
+
+          <label>user zipcode
+              <input name="zipcode" type="text" required />
+          </label>
+
+          <input value="submit" type="submit" />
+
+        </form>
+
+      <!--Text/Images go here-->  
+
+      </div><!--Ends the content_content div -->
+    <!--Body content inner div end-->
+    </div><!--Ends the content div -->
+    <!--Body content div end-->
+
+    <div class="footer_cap"></div>
+
+    <div class="footer">
+
+      <div class="center">
+        Emerald City Real Estate&trade; is a realogy company owned by Oz Properties&trade;, a subsidiary of Munchkin Real Funding.</br>
+        ECRE&trade; is not responsible for any hazards related to the sale or occupation of homes purchased within the Emerald City or any of its surrounding areas</br>
+        &copy;2013</br>
+      </div>
+     
+      <div class="right">
+        <img src="images/realtor.png">
+        <img src="images/equal.png">
+      </div>
+     
+      <div class="footer_cap"></div>
+
+    </div><!--Ends the footer div -->
+
+  </div><!--Ends the container div -->
+
+</body>
 </html>

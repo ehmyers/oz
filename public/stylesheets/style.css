@@ -10,43 +10,43 @@ body {
 	background-color: #292929;
 	/*background-color: #D4F2B7;*//*Holding on to this one in case of design changes*/
 	background-image: url("../images/bg2.png");/*File included, not sure if this can be used-SD*/
-	background-attachment:fixed;
+	background-attachment: fixed;
 }
 
 a {
-	outline:0;
+	outline: 0;
 }
 
 .connect {
 	/*background-color:#fff;
 	border: 1px solid #096;
-	border-radius:10px;
+	border-radius: 10px;
 	background-image: url("images/hf_bg1.png");*/
 }
 
 .connect div.slogan {
 	font-family: "Sintony", sans-serif;
-	font-size:10px;
-	white-space:nowrap;
-	background-color:red;
+	font-size: 10px;
+	white-space: nowrap;
+	background-color: red;
 }
 
 .connect_indicator {
 	border: 1px 1px 1px 0;
 	border-color: #096;
 	border-style: solid;
-	border-left-style:none;
-	border-top-right-radius:10px;
-	border-bottom-right-radius:10px;
+	border-left-style: none;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 	background-image: url("../images/hf_bg1.png");
 }
 
 .connect_links {
-	background-color:#FCFCE5;
+	background-color: #FCFCE5;
 }
 
 .content {
-	/*padding-bottom:170px;*/
+	/*padding-bottom: 170px;*/
 	/*background-color: #292929;*/
 }
 .content_content {
@@ -73,22 +73,23 @@ a {
 
 .footer .center {
 	font-family: "Sintony", sans-serif;
-	font-size:10px;
-	text-align:center;
+	font-size: 10px;
+	text-align: center;
 }
 
-.footerBottom {
+.footer_bottom {
 	background-color: #1E9A63;
 }
 
-.footerCap {
+.footer_cap {
 	background-color: #009966;
 }
 
-.innerFrame {
+/* not used -ehm-
+.inner_frame {
 	border: thin solid #009160;
 	background-color: #D4F2B7;
-}
+}*/
 
 .header {
 	background-color: #d4f2b7;
@@ -102,19 +103,19 @@ a {
 }
 
 .logo {
-	background-color:#D4F2B7;
+	background-color: #D4F2B7;
 	background-image: url("../images/hf_bg1.png");
 }
 
 .nav_links li {
 	font-family: "plaza_letplain", verdana, serif;
-	color:#D4F2B7;
+	color: #D4F2B7;
 	font-size: 24px;
 }
 
 .nav_links li a {
-	text-decoration:none;
-	color:#D4F2B7;
+	text-decoration: none;
+	color: #D4F2B7;
 	border-bottom-left-radius: 25px;
 	border-bottom-left-radius: 25px;
 	transition: all 1.5s ease-in;
@@ -122,13 +123,14 @@ a {
 }
 
 .nav_links li a:hover, .nav_links li a:active {
-	color:#ce6b56;
+	color: #ce6b56;
 	text-shadow: 2px 2px 2px #000;
 }
 
-.pictureFrame {
+/* not used -ehm-
+.picture_frame {
 	border: medium none #D4F2B7;
-}
+}*/
 
 .sales_content {
 	border-bottom: 1px solid #e0e0c8;
@@ -137,12 +139,12 @@ a {
 .sales_content .entry {
 	font-family: "Sintony", sans-serif;
 	font-size: 16px;
-	color:#292929;
+	color: #292929;
 }
 
 .sales_content .entry .left_content {
-  list-style:none;
-	text-align:left;
+  list-style: none;
+	text-align: left;
 }
 
 .sales_content .entry h3 {
@@ -150,7 +152,7 @@ a {
 }
 
 .sales_content .entry .left_content ul {
-  list-style:none inside none;
+  list-style: none inside none;
 }
 
 .sales_content .innerhtml {
