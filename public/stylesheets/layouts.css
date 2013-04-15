@@ -68,7 +68,7 @@ body, html {
 	height:auto !important;
 	min-height: 100%;
 	top: -25px;
-	z-index: -1;
+	z-index: -10;
 	margin-bottom: 50px;
 }
 
@@ -83,6 +83,18 @@ body, html {
 	margin-left: auto;
 	bottom: 0;
   padding: 10px;
+}
+
+.content_left_column {
+	float: left;
+	width: 50%;
+	padding: 0px 0px 0px 50px;
+}
+
+.content_right_column {
+	float: right;
+	width: 40%;
+	padding: 5;
 }
 
 .fixed {

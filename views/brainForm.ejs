@@ -9,8 +9,7 @@
   <script src="javascripts/app.js"></script>
 </head>
 
-<body onload="MM_preloadImages("images/homeRollover.png","images/brainLink.png","images/heartLink.png","images/courageLink.png","images/leisureLink.png","images/eventsLink.png","images/galleryLink.png")">
-
+<body>
   <div class="container">
 
     <div class="logo">
@@ -22,7 +21,7 @@
         <img src="images/ornateLeft.png" width="33" height="35" />
         <ul>
           <li><a href="/" id="home">hOME</a></li>
-          <li><a href="/brain" id="brain" class="active">bRAIN</a></li>
+          <li><a href="/brains" id="brains" class="active">bRAIN</a></li>
           <li><a href="/heart" id="heart">hEART</a></li>
           <li><a href="/courage" id="courage">cOURAGE</a></li>
           <li><a href="/leisure" id="leisure">lEISURE</a></li>
@@ -40,7 +39,7 @@
         <ul>
           <li><a href="http://www.facebook.com"><img src="images/fb_icon.png" /></a></li>
           <li><a href="http://www.twitter.com"><img src="images/t_icon.png" /></a></li>
-          <li><a href="http://www.goole.com/+"><img src="images/plus_icon.png" /></a></li>
+          <li><a href="http://www.google.com/+"><img src="images/plus_icon.png" /></a></li>
         </ul>
       </div><!--Ends the connect_links div-->
      
@@ -55,24 +54,30 @@
       <div class="content_content">
       <!--Text/Images go here-->  
       <!--Sales_content is for the individual sections of the content container-->
-      
-        <form action="/submitData" method="post">
+        <div class="sales_content content_left_column">
+          <h3>Think You're Smart Enough to Live in Oz?</h3>
+          <p>Through this test, we'll determine if you're intelligent enough to join the lovely gated community of Oz.  Please enter in your information on the right, and click submit to get started!</p>
+        </div>
 
-          <label>user id
-              <input name="userId" type="number" required />
-          </label>
+        <div class="sales_content">
+          <form class="content_right_column" action="/submitData" method="post">
 
-          <label>current street address?
-              <input name="streetAddress" type="text" /> <!-- convert to number -->
-          </label>
+            <p>user id
+                <input name="userId" type="number" required />
+            </p>
 
-          <label>user zipcode
-              <input name="zipcode" type="text" required />
-          </label>
+            <p>current street address?
+                <input name="streetAddress" type="text" />
+            </p>
 
-          <input value="submit" type="submit" />
+            <p>user zipcode
+                <input name="zipcode" type="number" required />
+            </p>
 
-        </form>
+            <input value="submit" type="submit" />
+
+          </form>
+        </div>
 
       <!--Text/Images go here-->  
 
@@ -86,7 +91,7 @@
     <div class="footer">
 
       <div class="center">
-        Emerald City Real Estate&trade; is a realogy company owned by Oz Properties&trade;, a subsidiary of Munchkin Real Funding.</br>
+        Emerald City Real Estate&trade; is a realty company owned by Oz Properties&trade;, a subsidiary of Munchkin Real Funding.</br>
         ECRE&trade; is not responsible for any hazards related to the sale or occupation of homes purchased within the Emerald City or any of its surrounding areas</br>
         &copy;2013</br>
       </div>
