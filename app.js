@@ -57,9 +57,11 @@ app.get("/courage-game", userController.courageGame);
 app.get("/brain-game", userController.brainGame);
 // submitting heart, courage, brain forms
 app.post("/submitBrainData", userController.submitBrainData);
+app.post("/submitHeartData", userController.submitHeartData);
 
 // finished the game -- from client, to server
 app.post("/finishedBrainGame", userController.brainWinSubmit);
+app.post("/finishedHeartGame", userController.heartWinSubmit);
 
 // new user form
 app.get("/users/new", userController.newUserForm);

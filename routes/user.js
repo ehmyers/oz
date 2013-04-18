@@ -147,3 +147,29 @@ exports.brainWinSubmit = function(req, res){
         });
     });
 }
+
+exports.submitHeartData = function(req, res){
+    console.log(req.session);
+    req.session.userId = req.body.userId;
+    redisClient.set(req.body.userId, JSON.stringify(req.body), function(error) {
+        if (error) {
+            res.send(error);
+        }
+        else {
+            res.redirect("/heart-game");
+        }
+    });
+};
+
+exports.heartWinSubmit = function(req, res){
+    redisClient.get(req.session.userId, function(error, value) {
+        UserModel.createOrUpdate(JSON.parse(value), function(error, user) {
+            if (error) {
+                res.send(error);
+            }
+            else {
+                res.redirect("/heart");
+            }
+        });
+    });
+}
