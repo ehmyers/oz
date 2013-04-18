@@ -4,7 +4,21 @@
  */
 
 var UserModel = require("../models/User")
-  , redisClient = require("redis").createClient();
+  , redis = require("redis")
+  , redisClient
+  , creds = {};
+
+if (process.env.NODE_ENV === "production") {
+    creds.port = process.env.REDIS_PORT;
+    creds.host = process.env.REDIS_HOST;
+} 
+else {
+    creds.port = 6379;
+    creds.host = "localhost";
+}
+
+console.log("Connecting to redis with " + creds.host + ":" + creds.port);
+redisClient = redis.createClient(creds.port, creds.host);
 
 exports.list = function(req, res){
     UserModel.getAllUsers(function(error, userList) {
