@@ -51,6 +51,13 @@ app.get("/users", userController.list);
 app.get("/heart", userController.heartForm);
 app.get("/courage", userController.courageForm);
 app.get("/brains", userController.brainForm);
+
+// setting up leisure, events, gallery, contact forms
+app.get("/leisure", userController.leisure);
+app.get("/gallery", userController.gallery);
+app.get("/events", userController.events);
+app.get("/contact", userController.contact);
+
 // heart, courage, brain games
 app.get("/heart-game", userController.heartGame);
 app.get("/courage-game", userController.courageGame);

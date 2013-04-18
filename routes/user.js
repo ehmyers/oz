@@ -109,6 +109,18 @@ exports.courageForm = function(req, res){
 exports.brainForm = function(req, res){
     res.render("brainForm");
 };
+exports.leisure = function(req, res){
+    res.render("leisure");
+};
+exports.gallery = function(req, res){
+    res.render("gallery");
+};
+exports.events = function(req, res){
+    res.render("events");
+};
+exports.contact = function(req, res){
+    res.render("contact");
+};
 
 // games
 exports.heartGame = function(req, res){

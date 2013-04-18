@@ -122,6 +122,10 @@ a {
 	text-shadow: 1px 1px 1px #000;
 }
 
+.nav_links .active {
+	color: #9fdae3;
+}
+
 /* are we sure we want to do a slow red fade? -ehm-
 .nav_links li a:hover, .nav_links li a:active {
 	color: #ce6b56;
