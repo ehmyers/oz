@@ -110,7 +110,7 @@ body, html {
 .footer {
 	height: 75px;
 	bottom: 0px;
-	position: fixed;
+	/*position: fixed;*/
 	width: 100%;
 }
 
