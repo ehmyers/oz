@@ -11,6 +11,7 @@ function main () {
             $("button").click();
         }
     });
+    $("input").val("");
 }
 
 $(document).ready(main);

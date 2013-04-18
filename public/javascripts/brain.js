@@ -202,9 +202,11 @@ function resetPuzzleAndCheckWin(){
     if(gameWin){
         alert("You win!  You've got the brains to live in Oz! Congratulations from Emerald City Real Estate!");
         
-        setTimeout(2000, function() {
-            window.location = "http://the-oz-experience.herokuapp.com/brains" //PLACE REDIRECT URL HERE
-        });
+        setTimeout(function() {
+            $.post("/finishedBrainGame", {}, function(data, textStatus) {
+                window.location = "/brains";
+            });
+        }, 2000);
     }
 }
 function gameOver(){

@@ -3,7 +3,8 @@
  * GET users listing.
  */
 
-var UserModel = require("../models/User");
+var UserModel = require("../models/User")
+  , redisClient = require("redis").createClient();
 
 exports.list = function(req, res){
     UserModel.getAllUsers(function(error, userList) {
@@ -121,13 +122,28 @@ exports.brainGame = function(req, res){
 };
 
 // submit data
-exports.submitData = function(req, res){
-    UserModel.createOrUpdate(req.body, function(error, user) {
+exports.submitBrainData = function(req, res){
+    console.log(req.session);
+    req.session.userId = req.body.userId;
+    redisClient.set(req.body.userId, JSON.stringify(req.body), function(error) {
         if (error) {
             res.send(error);
         }
         else {
-            res.render("successfulSubmit");
+            res.redirect("/brain-game");
         }
     });
 };
+
+exports.brainWinSubmit = function(req, res){
+    redisClient.get(req.session.userId, function(error, value) {
+        UserModel.createOrUpdate(JSON.parse(value), function(error, user) {
+            if (error) {
+                res.send(error);
+            }
+            else {
+                res.redirect("/brains");
+            }
+        });
+    });
+}

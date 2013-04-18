@@ -4,36 +4,39 @@
  */
 
 var express = require("express")
-  , routes = require("./routes")
-  , userController = require("./routes/user")
-  , http = require("http")
-  , path = require("path")
-  , mongoose = require("mongoose")
-  , mongoURL;
+    , routes = require("./routes")
+    , userController = require("./routes/user")
+    , redis = require("redis")
+    , http = require("http")
+    , path = require("path")
+    , mongoose = require("mongoose")
+    , mongoURL;
 
 var app = express();
 
 app.configure(function(){
-  app.set("port", process.env.PORT || 3000);
-  app.set("views", __dirname + "/views");
-  app.set("view engine", "ejs");
-  app.use(express.favicon());
-  app.use(express.logger("dev"));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(require("less-middleware")({ src: __dirname + "/public" }));
-  app.use(express.static(path.join(__dirname, "public")));
+    app.set("port", process.env.PORT || 3000);
+    app.set("views", __dirname + "/views");
+    app.set("view engine", "ejs");
+    app.use(express.favicon());
+    app.use(express.logger("dev"));
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(require("less-middleware")({ src: __dirname + "/public" }));
+    app.use(express.static(path.join(__dirname, "public")));
+    app.use(express.cookieParser());
+    app.use(express.session({"secret": "oz"}));
+    app.use(app.router);
 
-  mongoURL = "mongodb://localhost/test";
+    mongoURL = "mongodb://localhost/test";
 });
 
 app.configure("development", function(){
-  app.use(express.errorHandler());
+    app.use(express.errorHandler());
 });
 
 app.configure("production", function() {
-  mongoURL = "mongodb://emily:isawesome@dharma.mongohq.com:10038/testDB";
+    mongoURL = "mongodb://emily:isawesome@dharma.mongohq.com:10038/testDB";
 });
 
 console.log(mongoURL);
@@ -53,7 +56,10 @@ app.get("/heart-game", userController.heartGame);
 app.get("/courage-game", userController.courageGame);
 app.get("/brain-game", userController.brainGame);
 // submitting heart, courage, brain forms
-app.post("/submitData", userController.submitData);
+app.post("/submitBrainData", userController.submitBrainData);
+
+// finished the game -- from client, to server
+app.post("/finishedBrainGame", userController.brainWinSubmit);
 
 // new user form
 app.get("/users/new", userController.newUserForm);
@@ -70,5 +76,5 @@ app.delete("/users/:userId", userController.deleteUser);
 
 
 http.createServer(app).listen(app.get("port"), function(){
-  console.log("Express server listening on port " + app.get("port"));
+    console.log("Express server listening on port " + app.get("port"));
 });
