@@ -68,7 +68,6 @@ body, html {
 	height:auto !important;
 	min-height: 100%;
 	top: -25px;
-	z-index: -10;
 	margin-bottom: 50px;
 }
 
@@ -161,6 +160,7 @@ body, html {
 
 .links_bar {
 	height: 40px;
+	margin-bottom: 35px;
 }
 
 .logo {

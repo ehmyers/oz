@@ -7,9 +7,9 @@
 
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: #292929;
+	/*background-color: #90b358;*/
 	/*background-color: #D4F2B7;*//*Holding on to this one in case of design changes*/
-	background-image: url("../images/bg2.png");/*File included, not sure if this can be used-SD*/
+	background-image: url("../images/bg3.png");/*File included, not sure if this can be used-SD*/
 	background-attachment: fixed;
 }
 
