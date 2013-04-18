@@ -6,7 +6,9 @@
 var UserModel = require("../models/User")
   , redis = require("redis")
   , redisClient
-  , creds = {};
+  , url = require('url')
+  , redisURL = url.parse(process.env.REDISCLOUD_URL)
+  , redisClient = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
 
 if (process.env.NODE_ENV === "production") {
     creds.port = process.env.REDIS_PORT;
