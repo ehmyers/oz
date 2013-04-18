@@ -93,11 +93,13 @@ body, html {
 .content_left_column {
 	float: left;
 	width: 45%;
+	min-height: 300px;
 	padding: 0px 0px 0px 0px;
 }
 
 .content_right_column {
 	width: 45%;
+	min-height: 300px;
 }
 
 .fixed {
