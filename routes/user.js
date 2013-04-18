@@ -5,22 +5,9 @@
 
 var UserModel = require("../models/User")
   , redis = require("redis")
-  , redisClient
   , url = require('url')
   , redisURL = url.parse(process.env.REDISCLOUD_URL)
   , redisClient = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
-
-if (process.env.NODE_ENV === "production") {
-    creds.port = process.env.REDIS_PORT;
-    creds.host = process.env.REDIS_HOST;
-} 
-else {
-    creds.port = 6379;
-    creds.host = "localhost";
-}
-
-console.log("Connecting to redis with " + creds.host + ":" + creds.port);
-redisClient = redis.createClient(creds.port, creds.host);
 
 exports.list = function(req, res){
     UserModel.getAllUsers(function(error, userList) {
