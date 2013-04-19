@@ -6,7 +6,8 @@
 var UserModel = require("../models/User")
   , redis = require("redis")
   , url = require('url')
-  , redisURL = url.parse(process.env.REDISCLOUD_URL)
+  , redisLocation = process.env.REDISCLOUD_URL || "redis://localhost:6379"
+  , redisURL = url.parse(redisLocation)
   , redisClient = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
 
 exports.list = function(req, res){
@@ -142,6 +143,7 @@ exports.submitBrainData = function(req, res){
     req.session.userId = req.body.userId;
     redisClient.set(req.body.userId, JSON.stringify(req.body), function(error) {
         if (error) {
+            console.log("Error: " + error);
             res.send(error);
         }
         else {
