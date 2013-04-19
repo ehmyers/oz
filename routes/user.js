@@ -11,7 +11,7 @@ var UserModel = require("../models/User")
 if (process.env.REDISCLOUD_URL) {
     redisURL = url.parse(process.env.REDISCLOUD_URL);
     redisClient = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
-    redisClient.auth(redisPass);
+    redisClient.auth(redisURL.auth.split(":")[1]);
 }
 else {
     redisClient = redis.createClient();
