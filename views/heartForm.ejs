@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="/stylesheets/layouts.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <script src="javascripts/app.js"></script>
-
 </head>
 
 <body>
@@ -19,8 +18,8 @@
 
     <div class="links_bar">
       <div class="nav_links">
-        <img src="images/ornateLeft.png" width="33" height="35" />
         <ul>
+          <li><img src="/images/ornateLeft.png" width="33" height="35" /></li>
           <li><a href="/" id="home">hOME</a></li>
           <li><a href="/brains" id="brains">bRAIN</a></li>
           <li><a href="/heart" id="heart" class="active">hEART</a></li>
@@ -29,8 +28,8 @@
           <li><a href="/events" id="events">eVENTS</a></li>
           <li><a href="/gallery" id="gallery">gALLERY</a></li>
           <li><a href="/contact" id="contact">cONTACT</a></li>
+          <li><img src="/images/ornateRight.png" width="33px" height="35px" /></li>
         </ul>
-        <img class="end" width="33px" height="35px" src="images/ornateRight.png" />
       </div><!--Ends the nav_links div-->
     </div><!--Ends the links_bar div-->
 
@@ -62,7 +61,7 @@
         </div>
 
         <div class="sales_content content_right_column">
-          <form action="/submitData" method="post">
+          <form action="/submitHeartData" method="post">
 
             <p>user id
                 <input name="userId" type="number" />
