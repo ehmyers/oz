@@ -91,6 +91,14 @@ a {
 	background-color: #D4F2B7;
 }*/
 
+h2 {
+	font-family: 'Noto Serif', serif;
+}
+
+h4 {
+	font-size: .7em;
+}
+
 .header {
 	background-color: #d4f2b7;
 }
@@ -137,13 +145,12 @@ a {
 	border: medium none #D4F2B7;
 }*/
 
-.sales_content {
+/*.sales_content {
 	border-bottom: 1px solid #e0e0c8;
-}
+}*/
 
 .sales_content .entry {
-	font-family: "Sintony", sans-serif;
-	font-size: 16px;
+	font-family: "Nato", serif;
 	color: #292929;
 }
 
@@ -153,7 +160,7 @@ a {
 }
 
 .sales_content .entry h3 {
-	font-family: "Sintony", sans-serif;	
+	font-family: "Nato", serif;
 }
 
 .sales_content .entry .left_content ul {
@@ -161,6 +168,9 @@ a {
 }
 
 .sales_content .innerhtml {
-	background-image: url("../images/sbg1.png");
 	box-shadow: 1px 1px 5px #888888;
+}
+
+.sales_content li {
+	text-decoration: none;
 }
