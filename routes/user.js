@@ -6,9 +6,16 @@
 var UserModel = require("../models/User")
   , redis = require("redis")
   , url = require('url')
-  , redisLocation = process.env.REDISCLOUD_URL || "redis://localhost:6379"
-  , redisURL = url.parse(redisLocation)
-  , redisClient = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
+  , redisClient;
+
+if (process.env.REDISCLOUD_URL) {
+    redisURL = url.parse(process.env.REDISCLOUD_URL);
+    redisClient = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
+    redisClient.auth(redisPass);
+}
+else {
+    redisClient = redis.createClient();
+}
 
 exports.list = function(req, res){
     UserModel.getAllUsers(function(error, userList) {
