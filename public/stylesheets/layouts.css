@@ -92,12 +92,13 @@ body, html {
 
 .content_left_column {
 	float: left;
-	width: 45%;
+	width: 40%;
 	min-height: 300px;
 }
 
 .content_right_column {
-	width: 45%;
+	/*float: right;*/
+	width: 40%;
 	min-height: 300px;
 }
 
@@ -301,4 +302,9 @@ body, html {
 
 .top {
 	top: 0px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
 }
