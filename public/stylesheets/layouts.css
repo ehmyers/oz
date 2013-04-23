@@ -57,6 +57,10 @@ body, html {
 	left: 0px;
 }
 
+.contact {
+	min-height: 700px;
+}
+
 .container {
 	min-height: 100%;
 	position: relative;
@@ -68,14 +72,14 @@ body, html {
 	height:auto !important;
 	min-height: 100%;
 	top: -25px;
-	/*margin-bottom: 50px;*/
+	overflow-y: none;
 }
 
 .content_content{
 	display: block;	
 	min-width: 900px;
 	width: 70%;
-	min-height: 100%;
+	min-height: 500px;
 	height: 100%;
 	margin-top: 20px;
 	margin-right: auto;
@@ -92,14 +96,14 @@ body, html {
 
 .content_left_column {
 	float: left;
-	width: 40%;
+	width: 45%;
+	padding-right: 5%;
 	min-height: 300px;
 }
 
 .content_right_column {
 	/*float: right;*/
 	width: 40%;
-	min-height: 300px;
 }
 
 .fixed {
@@ -147,6 +151,10 @@ body, html {
 	display: block;	
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.gallery {
+	padding: 10px;
 }
 	
 .header {

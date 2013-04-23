@@ -5,6 +5,10 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
+a {
+	outline: 0;
+}
+
 body {
 	font-family: "Lato", sans-serif;
 	font-size: 1.25em;
@@ -13,8 +17,10 @@ body {
 	background-attachment: fixed;
 }
 
-a {
-	outline: 0;
+.watermark {
+	position: absolute;
+	z-index: 0;
+	opacity: .2;
 }
 
 .connect {
@@ -182,4 +188,9 @@ h4 {
 .sales_content li {
 	list-style: none;
 	padding-bottom: 15px;
+}
+
+.wrapper {
+	border-style: solid 5px;
+	border-bottom: #ff0000;
 }

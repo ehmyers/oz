@@ -197,3 +197,12 @@ exports.heartWinSubmit = function(req, res){
         });
     });
 }
+
+exports.showOz = function(req, res) {
+    if(error) {
+        res.send(error);
+    }
+    else {
+        res.render("oz");
+    }
+}

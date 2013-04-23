@@ -62,7 +62,7 @@ app.get("/contact", userController.contact);
 app.get("/heart-game", userController.heartGame);
 app.get("/courage-game", userController.courageGame);
 app.get("/brain-game", userController.brainGame);
-// submitting heart, courage, brain forms
+// submitting brain, heart forms
 app.post("/submitBrainData", userController.submitBrainData);
 app.post("/submitHeartData", userController.submitHeartData);
 
@@ -82,6 +82,9 @@ app.put("/users/:userId", userController.updateUser);
 
 // deleting the user
 app.delete("/users/:userId", userController.deleteUser);
+
+// oz interaction page
+app.get("/users/:userId/oz", userController.showOz);
 
 
 http.createServer(app).listen(app.get("port"), function(){
