@@ -17,12 +17,6 @@ body {
 	background-attachment: fixed;
 }
 
-.watermark {
-	position: absolute;
-	z-index: 0;
-	opacity: .2;
-}
-
 .connect {
 	/*background-color:#fff;
 	border: 1px solid #096;
@@ -188,6 +182,10 @@ h4 {
 .sales_content li {
 	list-style: none;
 	padding-bottom: 15px;
+}
+
+.watermark {
+	opacity: .2;
 }
 
 .wrapper {
