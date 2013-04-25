@@ -155,6 +155,7 @@ body, html {
 
 .gallery {
 	padding: 10px;
+	width: 250px;
 }
 	
 .header {
@@ -195,7 +196,7 @@ iframe {
 }
 
 .nav_links {	
-	width: 100%;
+	/*width: 100%;*/
 	position: relative;
 	height: 35px;
 	/*SD-Important for positioning*/
@@ -234,7 +235,7 @@ iframe {
 }
 
 .nav_links ul {
-	clear: left;
+	/*clear: left;*/
   float: left;
   list-style: none;
   margin: 0;
