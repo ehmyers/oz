@@ -325,3 +325,7 @@ ul {
 .wrapper {
 	min-height: 450px;
 }
+
+.wrapper img {
+	width: 95%;
+}
