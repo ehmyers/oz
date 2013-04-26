@@ -155,21 +155,6 @@ hr {
 	color: #9fdae3;
 }
 
-/* are we sure we want to do a slow red fade? -ehm-
-.nav_links li a:hover, .nav_links li a:active {
-	color: #ce6b56;
-	text-shadow: 2px 2px 2px #000;
-}*/
-
-/* not used -ehm-
-.picture_frame {
-	border: medium none #D4F2B7;
-}*/
-
-/*.sales_content {
-	border-bottom: 1px solid #e0e0c8;
-}*/
-
 .sales_content .entry {
 	font-family: "Noto-Sans", serif;
 	color: #292929;

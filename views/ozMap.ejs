@@ -1,89 +1,43 @@
 <!DOCTYPE html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Emerald City Realty :: The Great and Powerful Oz</title>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="images/ec_fav.png">
 
-  <link rel="icon" HREF="images/ec_fav.png" />
-  <link rel="stylesheet" href="/stylesheets/layouts.css" />
-  <link rel="stylesheet" href="/stylesheets/style.css" />
-  <script src="javascripts/app.js"></script>
+    <link rel="stylesheet" href="../../public/stylesheets/layouts.css" />
+    <link rel="stylesheet" href="../../public/stylesheets/style.css" />
+    <link href="/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiBrP_9Co9dZnb4GuwKZK84VlKmJrHsjk&sensor=false"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/geocode/json?address=82+Lees+Creek+Rd+Asheville+NC&sensor=true"></script>
+    <script type="text/javascript" src="google.js"></script>
 
-</head>
-
-<body>
-  <div class="container">
-
-    <div class="logo">
-      <a href="/" id="home"><img src="images/logo.png" /></a>
+  </head>
+  <body onload="initialize()">
+ 
+    <div class="textbox_style">
+      <input id="address" type="textbox" value="UNC Asheville">
+      <input type="button" value="Geocode" onclick="codeAddress()" onReturn="codeAddress()">
     </div>
 
-    <div class="links_bar">
-      <div class="nav_links">
-        <ul>
-          <li><img src="/images/ornateLeft.png" width="33" height="35" /></li>
-          <li><a href="/" id="home">hOME</a></li>
-          <li><a href="/brains" id="brains">bRAIN</a></li>
-          <li><a href="/heart" id="heart">hEART</a></li>
-          <li><a href="/courage" id="courage">cOURAGE</a></li>
-          <li><a href="/leisure" id="leisure">lEISURE</a></li>
-          <li><a href="/events" id="events">eVENTS</a></li>
-          <li><a href="/gallery" id="gallery">gALLERY</a></li>
-          <li><a href="/contact" id="contact">cONTACT</a></li>
-          <li><img src="/images/ornateRight.png" width="33px" height="35px" /></li>
-        </ul>
-      </div><!--Ends the nav_links div-->
-    </div><!--Ends the links_bar div-->
-
-    <!--
-    <div class="connect">
-      <div class="connect_links">
-        <ul>
-          <li><a href="http://www.facebook.com"><img src="images/fb_icon.png" /></a></li>
-          <li><a href="http://www.twitter.com"><img src="images/t_icon.png" /></a></li>
-          <li><a href="http://www.google.com/+"><img src="images/plus_icon.png" /></a></li>
-        </ul>
-      </div>
-     
-      <div class="connect_indicator"><img src="images/socialInd.png" /></div>
-    </div>-->
-
-    <!--Body content div-->
-    <div class="content">
-
-      <!--Body content inner div-->
-      <div class="content_content">
-      <!--Text/Images go here-->  
-      <!--Sales_content is for the individual sections of the content container-->
-
-
-
-      <!--Text/Images go here-->  
-
-      </div><!--Ends the content_content div -->
-    <!--Body content inner div end-->
-    </div><!--Ends the content div -->
-    <!--Body content div end-->
-
-    <div class="footer_cap"></div>
-
+    <div id="map-canvas" ></div>
+    
+    <div class="footerCap"></div>
+    
     <div class="footer">
 
       <div class="center">
-        Emerald City Real Estate&trade; is a realty company owned by Oz Properties&trade;, a subsidiary of Munchkin Real Funding.</br>
-        ECRE&trade; is not responsible for any hazards related to the sale or occupation of homes purchased within the Emerald City or any of its surrounding areas</br>
-        &copy;2013</br>
+      Emerald City Real Estate&trade; is a realogy company owned by Oz Properties&trade;, a subsidiary of Munchkin Real Funding.</br>
+      ECRE&trade; is not responsible for any hazards related to the sale or occupation of homes purchased within the Emerald City or any of its surrounding areas</br>
+      &copy;2013</br>
       </div>
-     
+      
       <div class="right">
-        <img src="images/realtor.png">
-        <img src="images/equal.png">
+        <img src="realtor.png">
+        <img src="equal.png">
       </div>
-     
-      <div class="footer_cap"></div>
+      
+      <div class="footerCap"></div>
 
-    </div><!--Ends the footer div -->
-
-  </div><!--Ends the container div -->
-
-</body>
+    </div>
+  </body>
 </html>
