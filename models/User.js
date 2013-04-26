@@ -8,7 +8,7 @@ var UserSchema = new Schema ( {
     streetAddress: String,
     zipcode: Number,
     heartPass: Number,
-    couragePass: Number,
+    couragePass: Boolean,
     brainPass: Number,
     favoriteHouseFeature: String
 });

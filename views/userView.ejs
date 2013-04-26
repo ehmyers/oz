@@ -10,14 +10,17 @@
 
     <h1>user: <%= user.firstName %></h1>
 
-    <p>
-      <span><a href="/users/<%= user.userId %>/update"><i class="icon-pencil"></i></a></span>
-      <span class="id_number"><%= user.userId %></span>
-      <span><%= user.firstName || "no name" %></span>
-      <span><%= user.streetAddress || "no address" %></span>
-      <span><%= user.zipcode || "no zipcode" %></span>
-      <span><%= user.favoriteHouseFeature || "no house feature" %></span>
-    </p>
+    <ul>
+      <li><a href="/users/<%= user.userId %>/update"><i class="icon-pencil"></i></a></li>
+      <li class="id_number">user id: <%= user.userId %></li>
+      <li>name: <%= user.firstName || "no name" %></li>
+      <li>address: <%= user.streetAddress || "no address" %></li>
+      <li>zipcode: <%= user.zipcode || "no zipcode" %></li>
+      <li>favorite house feature: <%= user.favoriteHouseFeature || "no house feature" %></li>
+      <li>brain pass:<%= user.brainPass || "false" %></li>
+      <li>courage pass: <%= user.couragePass || "false" %></li>
+      <li>heart pass: <%= user.heartPass || "false" %></li>
+    </ul>
 
   </body>
 </html>

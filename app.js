@@ -60,7 +60,7 @@ app.get("/contact", userController.contact);
 
 // heart, courage, brain games
 app.get("/heart-game", userController.heartGame);
-app.get("/courage-game", userController.courageGame);
+// app.get("/courage-game", userController.courageGame);
 app.get("/brain-game", userController.brainGame);
 // submitting heart, courage, brain forms
 app.post("/submitHeartData", userController.submitHeartData);

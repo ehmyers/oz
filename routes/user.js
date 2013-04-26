@@ -173,31 +173,13 @@ exports.brainWinSubmit = function(req, res){
 };
 
 exports.submitCourageData = function(req, res){
-    console.log(req.session);
-    req.session.userId = req.body.userId;
-    redisClient.set(req.body.userId, JSON.stringify(req.body), function(error) {
-        if (error) {
-            console.log("Error: " + error);
-            res.send(error);
-        }
-        else {
-            res.redirect("/courage-game");
-        }
+    UserModel.createOrUpdate({
+        "userId": req.body.userId,
+        "couragePass": true
+    }, function(err, user) {
+        res.redirect("/courage");
     });
 };
-
-exports.courageWinSubmit = function(req, res){
-    redisClient.get(req.session.userId, function(error, value) {
-        UserModel.createOrUpdate(JSON.parse(value), function(error, user) {
-            if (error) {
-                res.send(error);
-            }
-            else {
-                res.redirect("/courage");
-            }
-        });
-    });
-}
 
 exports.submitHeartData = function(req, res){
     console.log(req.session);
@@ -214,7 +196,9 @@ exports.submitHeartData = function(req, res){
 
 exports.heartWinSubmit = function(req, res){
     redisClient.get(req.session.userId, function(error, value) {
-        UserModel.createOrUpdate(JSON.parse(value), function(error, user) {
+        var attributes = JSON.parse(value);
+        attributes.heartPass = true;
+        UserModel.createOrUpdate(attributes, function(error, user) {
             if (error) {
                 res.send(error);
             }
