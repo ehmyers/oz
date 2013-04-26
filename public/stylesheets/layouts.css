@@ -7,11 +7,6 @@ body, html {
 	margin: 0;
 	padding: 0;
 }
-
-.column_two {
-	float: right;
-	position: relative;
-}
 	
 .connect {
 	position: fixed;
@@ -103,7 +98,7 @@ body, html {
 
 .content_right_column {
 	/*float: right;*/
-	width: 40%;
+	width: 41%;
 }
 
 .fixed {
@@ -198,17 +193,9 @@ iframe {
 
 .nav_links {	
 	width: 100%;
-	/*position: relative;*/
 	height: 35px;
-	/*SD-Important for positioning*/
-	/*if any new elements are created, for the different sections, they need to be*/
-	/*wrapped in an internal div and given the attributes below*/
-	/*Element needs an explicit width to calc. auto L/R margins*/
-	/*May also need RELATIVE position*/
-	/*Works like a jello layout, only in parts*/
 	display: block;	
-	/*margin-right: auto;*/
-	/*margin-left: auto;*/
+	text-align: center;
 }
 
 .nav_links img {
@@ -218,12 +205,6 @@ iframe {
 	margin: -7px;
 }
 
-.nav_links .inner {
-	width: 99%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /*.nav_links img.end { not used -ehm-
 	padding-top: 3px;
 	float: left;
@@ -231,25 +212,16 @@ iframe {
 }*/
 
 .nav_links li {
-	/*display: block;*/
   float: left;
   list-style: none;
   margin: 0;
   padding-right: 50px;
   padding-top: 10px;
-  /*position: relative;*/
-  /*right: 50%;*/
 }
 
 .nav_links ul {
-	/*clear: left;*/
-  /*float: left;*/
   list-style: none;
-  /*margin: 0;*/
-  /*padding: 0;*/
-  /*position: relative;*/
-  /*left: 50%;*/
-  text-align: center;
+  display: inline-block;
 }
 
 /* not used -ehm-
@@ -289,7 +261,6 @@ iframe {
 }
 
 .sales_content .entry .left_content {
-	/*margin-left: 400px;*/
 	padding: 100px;
 }
 
@@ -336,4 +307,8 @@ ul {
 	position: absolute;
 	z-index: 0;
 	width: 100%;
+}
+
+.wrapper {
+	min-height: 450px;
 }

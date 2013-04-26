@@ -14,7 +14,7 @@ body {
 	font-family: "Lato", sans-serif;
 	font-size: 1.25em;
 	/*background-color: #90b358;*/
-	background-image: url("../images/bg3.png");/*File included, not sure if this can be used-SD*/
+	background-image: url("../images/backgrounds/bg3.png");/*File included, not sure if this can be used-SD*/
 	background-attachment: fixed;
 }
 
@@ -39,7 +39,7 @@ body {
 	border-left-style: none;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-	background-image: url("../images/hf_bg1.png");
+	background-image: url("../images/backgrounds/hf_bg1.png");
 }
 
 .connect_links {
@@ -68,7 +68,7 @@ body {
 
 .footer {
 	background-color: #D4F2B7;
-	background-image: url("../images/hf_bg1.png");
+	background-image: url("../images/backgrounds/hf_bg1.png");
 	box-shadow: 0px -7px 7px -7px black;
 }
 
@@ -108,6 +108,15 @@ h4 {
 	font-size: .7em;
 }
 
+hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
 .header {
 	background-color: #d4f2b7;
 }
@@ -122,14 +131,6 @@ h4 {
 .logo {
 	background-color: #D4F2B7;
 	background-image: url("../images/hf_bg1.png");
-}
-
-.nav_links {
-	text-align: center;
-}
-
-.nav_links ul {
-	display: inline-block;
 }
 
 .nav_links li {
@@ -201,7 +202,6 @@ h4 {
 	opacity: .2;
 }
 
-.wrapper {
-	border-style: solid 5px;
-	border-bottom: #ff0000;
-}
+/*.wrapper {
+	border-bottom: solid thin;
+}*/ 
