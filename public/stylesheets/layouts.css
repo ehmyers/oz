@@ -317,7 +317,7 @@ ul {
 .watermark {
 	position: absolute;
 	z-index: 0;
-	width: 100%;
+	width: 65%;
 }
 
 .wrapper {
