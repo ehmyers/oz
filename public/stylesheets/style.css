@@ -120,6 +120,10 @@ hr {
 	background-color: #d4f2b7;
 }
 
+li {
+	list-style: none;
+}
+
 .links_bar {
 	background-color: #096;
 	background-image:  -moz-linear-gradient(middle, #444444, #999999);
@@ -161,7 +165,6 @@ hr {
 }
 
 .sales_content .entry .left_content {
-  list-style: none;
 	text-align: left;
 }
 
@@ -178,7 +181,6 @@ hr {
 }
 
 .sales_content li {
-	list-style: none;
 	padding-bottom: 15px;
 }
 

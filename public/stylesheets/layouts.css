@@ -86,7 +86,7 @@ body, html {
 
 .content_center {
 	width: 100%;
-	padding: 5;
+	/*padding: 5px;*/
 	text-align: center;
 }
 
@@ -177,6 +177,18 @@ iframe {
 	border: none;
 }
 
+.leisure div {
+	padding: 0px 0px 15px 0px;
+}
+
+li {
+	padding-bottom: 15px;
+}
+
+li img {
+	padding-bottom: 55px;
+}
+
 .links_bar {
 	height: 40px;
 	margin-bottom: 35px;
@@ -218,12 +230,6 @@ iframe {
 	margin: -7px;
 }
 
-/*.nav_links img.end { not used -ehm-
-	padding-top: 3px;
-	float: left;
-	padding-right: 0px;
-}*/
-
 .nav_links li {
   float: left;
   list-style: none;
@@ -237,25 +243,6 @@ iframe {
   display: inline-block;
 }
 
-/* not used -ehm-
-.ornate_left {
-	position: absolute;
-	left: 275px;
-	top: 3px;
-}
-
-.ornate_right {
-	position: absolute;
-	left: 935px;
-	top: 3px;
-}
-
-.pictureFrame {
-	height: 350px;
-	width: 575px;
-	position: relative;
-}*/
-
 .resizable_canvas {
 	width: 100%;
 	min-width: 1000px;
@@ -268,7 +255,7 @@ iframe {
 }
 
 .sales_content {
-	padding: 20px 0px 20px 40px;
+	padding: 40px 0px 0px 40px;
 	/*margin-top: 10px;*/
 	margin: 0px 40px 10px 40px;
 	position: relative;
