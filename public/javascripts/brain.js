@@ -39,7 +39,7 @@ function setCanvas(){
     _stage = _canvas.getContext('2d');
     _canvas.width = _puzzleWidth;
     _canvas.height = _puzzleHeight;
-    _canvas.style.border = "1px solid black";
+    _canvas.style.border = "none";
 }
 function initPuzzle(){
     _pieces = [];
@@ -109,6 +109,13 @@ function onPuzzleClick(e){
        _mouse.x = e.offsetX - _canvas.offsetLeft;
        _mouse.y = e.offsetY - _canvas.offsetTop;
     }
+
+    console.log(_canvas.clientWidth / 1600);
+    // scale mouse pos based on size of canvas
+    _mouse.x = _mouse.x * (1600 / _canvas.clientWidth);
+    _mouse.y = _mouse.y * (1200 / _canvas.clientHeight);
+    console.log(_mouse);
+
     _currentPiece = checkPieceClicked();
     if(_currentPiece != null){
        _stage.clearRect(_currentPiece.xPos,_currentPiece.yPos,_pieceWidth,_pieceHeight);
@@ -144,6 +151,11 @@ function updatePuzzle(e){
        _mouse.x = e.offsetX - _canvas.offsetLeft;
        _mouse.y = e.offsetY - _canvas.offsetTop;
     }
+    
+    // scale mouse pos based on size of canvas
+    _mouse.x = _mouse.x * (1600 / _canvas.clientWidth);
+    _mouse.y = _mouse.y * (1200 / _canvas.clientHeight);
+
     _stage.clearRect(0,0,_puzzleWidth,_puzzleHeight);
     var i;
     var piece;

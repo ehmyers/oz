@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Emerald City Realty :: Emerald City Real Estate&trade; is the wise choice</title>
+  <title>Emerald City Realty :: The Great and Powerful Oz</title>
 
   <link rel="icon" HREF="images/ec_fav.png" />
   <link rel="stylesheet" href="/stylesheets/layouts.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script src="/javascripts/app.js"></script>
 
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="/javascripts/brain.js"></script>
-  <script src="javascripts/app.js"></script>
 </head>
 
-<body onload="init();">
+<body>
   <div class="container">
 
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" /></a>
+      <img src="/images/logo.png" />
     </div>
 
     <div class="links_bar">
@@ -24,7 +22,7 @@
         <ul>
           <li><img src="/images/ornateLeft.png" width="33" height="35" /></li>
           <li><a href="/" id="home">hOME</a></li>
-          <li><a href="/brains" id="brains" class="active">bRAIN</a></li>
+          <li><a href="/brains" id="brains">bRAIN</a></li>
           <li><a href="/heart" id="heart">hEART</a></li>
           <li><a href="/courage" id="courage">cOURAGE</a></li>
           <li><a href="/leisure" id="leisure">lEISURE</a></li>
@@ -36,7 +34,7 @@
       </div><!--Ends the nav_links div-->
     </div><!--Ends the links_bar div-->
 
-    <!--Social contact popout starts here
+    <!--
     <div class="connect">
       <div class="connect_links">
         <ul>
@@ -56,8 +54,20 @@
       <div class="content_content">
       <!--Text/Images go here-->  
       <!--Sales_content is for the individual sections of the content container-->
-        <div class="sales_content content_center">
-          <canvas id="canvas" class="resizable_canvas"></canvas>
+
+        <div class="sales_content content_left_column">
+          <p>Please enter in your id to hear from the Great and Powerful Oz</p>
+        </div>
+
+        <div class="sales_content content_right_column">
+          <form action="/submitOzData" method="get">
+            <p>user id
+                <input name="userId" type="number" />
+            </p>
+
+            <input value="submit" type="submit" />
+
+          </form>
         </div>
 
       <!--Text/Images go here-->  
@@ -72,7 +82,7 @@
     <div class="footer">
 
       <div class="center">
-        Emerald City Real Estate&trade; is a realty company owned by Oz Properties&trade;, a subsidiary of Munchkin Real Funding.</br>
+        Emerald City Real Estate&trade; is a realogy company owned by Oz Properties&trade;, a subsidiary of Munchkin Real Funding.</br>
         ECRE&trade; is not responsible for any hazards related to the sale or occupation of homes purchased within the Emerald City or any of its surrounding areas</br>
         &copy;2013</br>
       </div>

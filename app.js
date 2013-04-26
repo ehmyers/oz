@@ -62,9 +62,10 @@ app.get("/contact", userController.contact);
 app.get("/heart-game", userController.heartGame);
 app.get("/courage-game", userController.courageGame);
 app.get("/brain-game", userController.brainGame);
-// submitting brain, heart forms
-app.post("/submitBrainData", userController.submitBrainData);
+// submitting heart, courage, brain forms
 app.post("/submitHeartData", userController.submitHeartData);
+app.post("/submitCourageData", userController.submitCourageData);
+app.post("/submitBrainData", userController.submitBrainData);
 
 // finished the game -- from client, to server
 app.post("/finishedBrainGame", userController.brainWinSubmit);
@@ -74,6 +75,11 @@ app.post("/finishedHeartGame", userController.heartWinSubmit);
 app.get("/users/new", userController.newUserForm);
 app.post("/users/new", userController.newUser);
 
+// oz interaction page
+app.get("/users/:userId/oz", userController.showOz);
+app.get("/oz", userController.ozForm);
+app.get("/submitOzData", userController.ozGetUser);
+
 // showing the user
 app.get("/users/:userId", userController.showUser);
 // updating the user
@@ -82,10 +88,6 @@ app.put("/users/:userId", userController.updateUser);
 
 // deleting the user
 app.delete("/users/:userId", userController.deleteUser);
-
-// oz interaction page
-app.get("/users/:userId/oz", userController.showOz);
-
 
 http.createServer(app).listen(app.get("port"), function(){
     console.log("Express server listening on port " + app.get("port"));

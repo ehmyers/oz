@@ -170,7 +170,11 @@ exports.brainWinSubmit = function(req, res){
             }
         });
     });
-}
+};
+
+exports.submitCourageData = function(req, res){
+
+};
 
 exports.submitHeartData = function(req, res){
     console.log(req.session);
@@ -199,10 +203,14 @@ exports.heartWinSubmit = function(req, res){
 }
 
 exports.showOz = function(req, res) {
-    if(error) {
-        res.send(error);
-    }
-    else {
-        res.render("oz");
-    }
+    res.render("oz");
+}
+
+exports.ozForm = function(req, res) {
+    res.render("ozForm");
+}
+
+exports.ozGetUser = function(req, res) {
+    var id = url.parse(req.url, true).query.userId;
+    res.redirect("/users/" + id + "/oz");
 }
