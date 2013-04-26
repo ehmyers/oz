@@ -14,7 +14,7 @@
   <div class="container">
 
     <div class="logo">
-      <a href="/" id="home"><img src="images/logo.png" /></a>>
+      <a href="/" id="home"><img src="images/logo.png" /></a>
     </div>
 
     <div class="links_bar">
@@ -55,14 +55,21 @@
       <!--Text/Images go here-->  
       <!--Sales_content is for the individual sections of the content container-->
 
+        <div class="content_center">
+          <h2>The Great and Powerful Oz</h2>
+          <div class="watermark">
+            <img src="../images/logo_watermark.png" />
+          </div>
+        </div>
+
         <div class="sales_content content_left_column">
-          <p>Please enter in your id to hear from the Great and Powerful Oz</p>
+          <p>Please enter in your ID number to hear from <br /><strong>the Great and Powerful Oz</strong></p>
         </div>
 
         <div class="sales_content content_right_column">
           <form action="/submitOzData" method="get">
             <p>user id
-                <input name="userId" type="number" />
+              <input name="userId" type="number" />
             </p>
 
             <input value="submit" type="submit" />
