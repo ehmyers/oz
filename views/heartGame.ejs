@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="/stylesheets/layouts.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
 
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="javascripts/app.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/javascripts/paper-min.js"></script>
+  <script type="text/paperscript" src="/javascripts/heart.js"></script>
+  <script type="text/javascript" src="/javascripts/app.js"></script>
 </head>
 
-<body onload="init();">
+<body>
   <div class="container">
 
     <div class="logo">
@@ -56,7 +58,12 @@
       <!--Text/Images go here-->  
       <!--Sales_content is for the individual sections of the content container-->
         <div class="sales_content content_center">
-          <iframe src="http://nm.unca.edu/~sgrothma/quiz2/"></iframe>
+          <canvas id="canvas" resize></canvas>
+          <div id="greeting_text" style="visibility:hidden"><h1><h2>Test Your Heart!<h1><a href="CaptivateQuiz/index.html">Take the Quiz.</a></div>
+
+          <audio id="audio"></audio>
+
+          <input type="image" name="submit" id="bt_sound" src="icon/bt_enable.png" style="visibility:hidden">
         </div>
 
       <!--Text/Images go here-->  

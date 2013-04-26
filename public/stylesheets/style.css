@@ -4,6 +4,7 @@
 /*Google Fonts*/
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
 
 a {
 	outline: 0;
@@ -123,10 +124,22 @@ h4 {
 	background-image: url("../images/hf_bg1.png");
 }
 
+.nav_links {
+	text-align: center;
+}
+
+.nav_links ul {
+	display: inline-block;
+}
+
 .nav_links li {
 	font-family: "plaza_letplain", verdana, serif;
 	color: #D4F2B7;
 	font-size: 24px;
+}
+
+.nav_links li:last-child {
+	padding-right: 0px;
 }
 
 .nav_links li a {

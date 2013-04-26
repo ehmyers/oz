@@ -173,8 +173,9 @@ body, html {
 }*/
 
 iframe {
-	margin-left: auto;
-	margin-right: auto;
+	width: 90%;
+	height: 100%;
+	margin: 0px auto;
 	padding: 0px;
 }
 
@@ -196,8 +197,8 @@ iframe {
 }
 
 .nav_links {	
-	/*width: 100%;*/
-	position: relative;
+	width: 100%;
+	/*position: relative;*/
 	height: 35px;
 	/*SD-Important for positioning*/
 	/*if any new elements are created, for the different sections, they need to be*/
@@ -206,8 +207,8 @@ iframe {
 	/*May also need RELATIVE position*/
 	/*Works like a jello layout, only in parts*/
 	display: block;	
-	margin-right: auto;
-	margin-left: auto;
+	/*margin-right: auto;*/
+	/*margin-left: auto;*/
 }
 
 .nav_links img {
@@ -217,6 +218,12 @@ iframe {
 	margin: -7px;
 }
 
+.nav_links .inner {
+	width: 99%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*.nav_links img.end { not used -ehm-
 	padding-top: 3px;
 	float: left;
@@ -224,24 +231,24 @@ iframe {
 }*/
 
 .nav_links li {
-	display: block;
+	/*display: block;*/
   float: left;
   list-style: none;
   margin: 0;
   padding-right: 50px;
   padding-top: 10px;
-  position: relative;
-  right: 50%;
+  /*position: relative;*/
+  /*right: 50%;*/
 }
 
 .nav_links ul {
 	/*clear: left;*/
-  float: left;
+  /*float: left;*/
   list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  left: 50%;
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*position: relative;*/
+  /*left: 50%;*/
   text-align: center;
 }
 
