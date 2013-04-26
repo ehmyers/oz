@@ -73,9 +73,9 @@ body, html {
 .content_content{
 	display: block;	
 	min-width: 900px;
-	width: 70%;
 	max-width: 1500px;
-	min-height: 500px;
+	width: 70%;
+	min-height: 700px;
 	height: 100%;
 	margin-top: 20px;
 	margin-right: auto;
@@ -108,9 +108,9 @@ body, html {
 }
 
 .footer {
+	position: absolute;
 	height: 75px;
 	bottom: 0px;
-	/*position: fixed;*/
 	width: 100%;
 }
 
