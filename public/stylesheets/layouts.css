@@ -243,6 +243,11 @@ iframe {
 	position: relative;
 }*/
 
+.resizable_canvas {
+	width: 100%;
+	height: 100%;
+}
+
 .sales_content {
 	padding: 20px 0px 20px 40px;
 	/*margin-top: 10px;*/

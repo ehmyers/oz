@@ -4,7 +4,7 @@
 
 //CSS above centers puzzle, change the width if image is larger than 1000px width
 
-const PUZZLE_DIFFICULTY = 3; //determines grid (currently 5x5)
+const PUZZLE_DIFFICULTY = 5; //determines grid (currently 5x5)
 const PUZZLE_HOVER_TINT = '#009900';
 
 var _stage;
@@ -24,7 +24,7 @@ var _mouse;
 function init(){
     _img = new Image();
     _img.addEventListener('load',onImage,false);
-    _img.src = "/images/the-wizard-of-oz-smaller.jpg"; //PLACE IMAGE FILE HERE
+    _img.src = "/images/brain_image.jpg"; //PLACE IMAGE FILE HERE
 }
 function onImage(e){
     _pieceWidth = Math.floor(_img.width / PUZZLE_DIFFICULTY)
