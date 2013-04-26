@@ -94,7 +94,7 @@ body, html {
 	float: left;
 	width: 45%;
 	padding-right: 5%;
-	min-height: 300px;
+	min-height: 400px;
 }
 
 .content_right_column {
@@ -151,7 +151,7 @@ body, html {
 
 .gallery {
 	padding: 10px;
-	width: 450px;
+	width: 400px;
 }
 	
 .header {
@@ -324,7 +324,7 @@ ul {
 }
 
 .wrapper {
-	min-height: 450px;
+	min-height: 550px;
 }
 
 .wrapper img {
