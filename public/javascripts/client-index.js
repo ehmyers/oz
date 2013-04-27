@@ -12,6 +12,16 @@ function main () {
         }
     });
     $("input").val("");
+
+    $("form").submit(function(e) {
+        e.preventDefault();
+        if (("#userId").val().isNumeric()) {
+            $("form").submit();
+        }
+        else {
+            alert("User ID needs to be a number.");
+        }
+    });
 }
 
 $(document).ready(main);
