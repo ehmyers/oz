@@ -210,7 +210,11 @@ exports.heartWinSubmit = function(req, res){
 }
 
 exports.showOz = function(req, res) {
-    res.render("oz");
+    UserModel.findOne({"userId": req.params.userId}, function(err, user) {
+        res.render("ozMap", {
+            "address": user.streetAddress + " " + user.zipcode
+        });
+    });
 }
 
 exports.ozForm = function(req, res) {

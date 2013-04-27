@@ -36,7 +36,7 @@ function HomeControl(controlDiv, map) {
     // Setup the click event listeners: simply set the map to
     // Chicago
     google.maps.event.addDomListener(controlUI, 'click', function() {
-        map.setCenter(codeAddress())
+        map.setCenter(codeAddress());
     });
 
 }
@@ -105,7 +105,11 @@ function initialize() {
 
 function codeAddress() {
     
-    var address = document.getElementById('address').value;
+    var address = $("#address").val();//document.getElementById('address').value;
+    if (address === "undefined undefined") {
+        address = "1 University Heights, Asheville, NC";
+        $("#address").val(address);
+    }
     geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             map.setCenter(results[0].geometry.location);

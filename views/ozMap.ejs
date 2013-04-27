@@ -4,18 +4,19 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="icon" href="images/ec_fav.png">
 
-    <link rel="stylesheet" href="../../public/stylesheets/layouts.css" />
-    <link rel="stylesheet" href="../../public/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/layouts.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <link href="/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiBrP_9Co9dZnb4GuwKZK84VlKmJrHsjk&sensor=false"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/geocode/json?address=82+Lees+Creek+Rd+Asheville+NC&sensor=true"></script>
-    <script type="text/javascript" src="google.js"></script>
+    <script type="text/javascript" src="/javascripts/google.js"></script>
 
   </head>
-  <body onload="initialize()">
+  <body onload="">
  
     <div class="textbox_style">
-      <input id="address" type="textbox" value="UNC Asheville">
+      <input id="address" type="textbox" value="<%= address %>">
       <input type="button" value="Geocode" onclick="codeAddress()" onReturn="codeAddress()">
     </div>
 
@@ -32,12 +33,19 @@
       </div>
       
       <div class="right">
-        <img src="realtor.png">
-        <img src="equal.png">
+        <img src="/images/realtor.png">
+        <img src="/images/equal.png">
       </div>
       
       <div class="footerCap"></div>
 
     </div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        initialize();
+        codeAddress();
+      });
+    </script>
   </body>
 </html>
