@@ -95,7 +95,9 @@ body {
 }
 
 h2 {
-	font-family: "Noto Sans", sans-serif;
+	/*font-family: "Noto Sans", sans-serif;*/
+	font-family: "plaza_letplain", verdana, serif;
+	font-size: 2.5em;
 }
 
 h3 {
